@@ -203,6 +203,9 @@
 						<!-- Custom Designed -->
 							<article id="custom_designed">
 								<h2 class="major">Custom Designed</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<h3>Final Product First</h3>
+								<hr>
 								<span class="image main"><img src="images/layout.PNG" alt="" /></span>
 								<h3>The Layout</h3>
 								<p>
@@ -253,6 +256,34 @@
 								<hr>
 								<h3>Assembly</h3>
 								<p>Currently a work in progress</p>
+								<hr>
+								<h3>Firmware</h3>
+								<p>
+									I wrote the firmware using <a href="https://docs.qmk.fm/#/">QMK</a> as it is the most used for mechanical keyboards. It took a bit of trial and error but I was eventually able to get the board's firmware to compile properly. I decided to add some simple macros to fill in the F Cluster on the left side. 
+								</p>
+								<pre><code>
+									bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+	  case TASK:
+      if (record->event.pressed) { //open task manager
+        // when keycode TASK is pressed
+        register_code(KC_LSFT);
+		register_code(KC_LCTL);
+		register_code(KC_ESC);
+      } else {
+        // when keycode TASK is released
+		unregister_code(KC_LSFT);
+		unregister_code(KC_LCTL);
+		unregister_code(KC_ESC);
+      }
+      break;
+  }
+  return true;
+};
+								</code></pre>
+								<p>
+									Other macros were made in a similar way.
+								</p>
 							</article>
 
 						<!-- Interested -->
@@ -264,6 +295,8 @@
 								<h3>Split Keyboards</h3>
 								<span class="image main"><img src="images/absolute_unit.png" alt="" /></span>
 								<a href="https://github.com/ihotsuno/keyboard/tree/master/kbd-fluorite-cxl/fluorite">Fluorite XL</a>
+								<span class="image main"><img src="images/orbit.png" alt="" /></span>
+								<a href="https://github.com/ai03-2725/Orbit">Orbit</a>
 							</article>
 
 						<!-- Elements -->
