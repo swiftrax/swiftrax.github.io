@@ -2770,7 +2770,6 @@ input, select, textarea {
 	}
 
 	/* Dark Mode Styles */
-	/* Dark Mode Styles */
 	body.dark-mode {
 		background-color: #121212;
 		color: #ffffff;
@@ -2781,12 +2780,11 @@ input, select, textarea {
 		color: #ffffff;
 	}
 
-
-	body.dark-mode h1, 
-	body.dark-mode h2, 
-	body.dark-mode h3, 
-	body.dark-mode h4, 
-	body.dark-mode h5, 
+	body.dark-mode h1,
+	body.dark-mode h2,
+	body.dark-mode h3,
+	body.dark-mode h4,
+	body.dark-mode h5,
 	body.dark-mode h6 {
 		color: #ffffff;
 	}
@@ -2799,7 +2797,7 @@ input, select, textarea {
 		color: #9a67ea;
 	}
 
-	body.dark-mode strong, 
+	body.dark-mode strong,
 	body.dark-mode b {
 		color: #ffffff;
 	}
@@ -2953,6 +2951,62 @@ input, select, textarea {
 
 	body.dark-mode #footer .copyright li a {
 		color: inherit;
+	}
+
+	/* General Styles */
+	.section-header {
+		text-align: center;
+		margin-bottom: 15px; /* Reduced vertical space */
+	}
+
+	.section-description {
+		text-align: center;
+		margin-bottom: 15px; /* Reduced vertical space */
+	}
+
+	.skill-box {
+		padding: 5px 5px; /* Tighter vertical padding and wider horizontal padding */
+		background-color: #f4f4f9; /* Light background for normal mode */
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		margin-bottom: 15px; /* Increased vertical space between skill boxes */
+	}
+
+	.skill-box ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.skill-box ul li {
+		margin-bottom: 6px; /* Reduced space between list items */
+	}
+
+	/* Dark Mode Styles */
+	body.dark-mode .section-header,
+	body.dark-mode .section-description {
+		color: #ffffff;
+	}
+
+	body.dark-mode .skill-box {
+		background-color: #1f1f1f; /* Dark background for skill boxes in dark mode */
+		border: 1px solid #333333;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		padding: 5px 5px; /* Tighter vertical padding and wider horizontal padding */
+		margin-bottom: 15px; /* Increased vertical space between skill boxes in dark mode */
+	}
+
+	body.dark-mode .skill-box ul li {
+		color: #e0e0e0; /* Light color for text in the dark mode */
+	}
+
+	body.dark-mode .skill-box ul li strong {
+		color: #bb86fc; /* Highlight strong text in dark mode */
+	}
+
+	/* Additional body dark mode styles */
+	body.dark-mode {
+		background-color: #121212;
+		color: #ffffff;
 	}
 
 	/* Dark Mode for poptrox-popup */
